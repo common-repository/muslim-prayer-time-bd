@@ -1,0 +1,76 @@
+/*!
+* Muslim Prayer Time BD - v2.4 - 28th March, 2023
+* by @realwebcare - https://www.realwebcare.com/
+*/
+.prayer-time-settings{background:#dfeeef;width:758px;margin:21px 15px 0 0;padding:20px 0 0 30px;border:5px solid #9dc8cb;border-radius:25px;box-shadow:0 0 3px 1px #9dc8cb}
+.prayer-time-settings .prayer-options,
+.prayer-time-settings .prayer-color{float:left;width:96%;margin:0;padding:20px 0;position:relative;border-bottom:2px solid #aacbcd}
+.prayer-time-settings .prayer-options.start-options{border-top:2px solid #aacbcd}
+.prayer-time-settings .prayer-options:before,
+.prayer-time-settings .prayer-color:before{content:"";position:absolute;left:0;top:-1px;width:100%;height:1px;background:#f6f7f7}
+.prayer-time-settings #sehri_enable .prayer-options,
+.prayer-time-settings #sehri_enable .prayer-color,
+.prayer-time-settings #image_enable .prayer-options{border-color:#83bfc3;padding-top:30px}
+.prayer-time-settings #sehri_enable .prayer-options:before,
+.prayer-time-settings #sehri_enable .prayer-color:before,
+.prayer-time-settings #image_enable .prayer-options:before{background:#def3f3}
+.prayer-time-settings label.input-check,
+.prayer-time-settings label.input-title{color:#555555;padding:6px 0;float:left;font-size:14px;font-weight:700;width:50%;cursor:auto}
+.prayer-time-settings #sehri_enable .prayer-options.start-sehri,
+.prayer-time-settings #image_enable .prayer-options.start-image{padding-top:10px}
+.prayer-time-settings #sehri_enable .prayer-options.end-sehri,
+.prayer-time-settings #image_enable .prayer-options.end-image{border-bottom:none;padding-bottom:30px}
+.prayer-time-settings #sehri_enable .prayer-options.start-sehri::before,
+.prayer-time-settings #image_enable .prayer-options.start-image::before{background-color:transparent}
+.prayer-time-settings .prayer-options textarea{position:relative;top:-5px;border-color:#83bfc3}
+.prayer-time-settings span.prayer_note{position:absolute;bottom:8px;font-size:10px;color:#3591ca;font-weight:600;cursor:pointer}
+.prayer-time-settings span#name-clear,
+.prayer-time-settings span#time-clear{display:none}
+.prayer-time-settings label.enable_check{float:left;padding:0;margin:3px 0 2px 25px;position:relative}
+.prayer-time-settings label.enable_check input[type=checkbox]{margin:4px 7px 4px 10px}
+.prayer-time-settings label.enable_check input[type=checkbox]:after{content:"Off";position:absolute;z-index:1;margin:-14px 0 0;top:50%;right:4px;display:inline-block;background:#cccccc;padding:14px 5px;width:4em;border-radius:30px;box-shadow:inset 1px 1px 1px rgba(0,0,0,0.3);color:#669933;text-transform:uppercase;font-size:11px;text-align:left}
+.prayer-time-settings label.enable_check input[type=checkbox]:checked:after{content:"On";text-align:right;padding-right:6px;background:#0085BA;color:#EEEEEE}
+.prayer-time-settings label.enable_check input[type=checkbox]:before{content:"";position:absolute;z-index:2;width:1.6em;height:1.6em;top:50%;margin-top:-.8em;right:7px;font-size:14px;background:#eee;border-radius:1em;box-shadow:0 1px 1px #999,inset 0 3px 4px #fff;transition:right .05s linear}
+.prayer-time-settings label.enable_check input[type=checkbox]:checked:before{right:33px}
+.prayer-time-settings #sehri_enable,
+.prayer-time-settings #image_enable{display:none;width:693px;float:left;background:#b7e4e7;border:1px solid #9dc8cb;border-top:1px solid #def3f3;margin:0 0 30px;padding:20px 0 0 33px;position:relative;top:-1px}
+.prayer-time-settings #sehri_enable::before,
+.prayer-time-settings #image_enable::before{content:"";position:absolute;border:solid;border-color:transparent transparent #aacbcd;border-width:15px;top:-32px;left:52%;transform:translateX(-52%)}
+.prayer-time-settings select#default_city{float:left;width:20%}
+.prayer-time-settings #clear_all{margin:10px}
+.prayer-time-settings .prayer-color label.input-title{padding:3px 0}
+.prayer-time-settings .wp-picker-container.wp-picker-active{float:left}
+.prayer-time-settings a.wp-color-result{margin:0 2px 0 0}
+.prayer-time-settings a.mptbd_tooltip{font-size:20px;width:20px;height:20px;margin:0 0 0 5px;text-decoration:none;position:relative;top:-1px;display:inline-block;vertical-align:middle;font-weight:400;color:#555555}
+.prayer-time-settings a.mptbd_tooltip:hover:after{content:attr(rel);background:#3c434a;color:#ffffff;border:1px solid #1d2327;-moz-border-radius:5px;-webkit-border-radius:5px;-o-border-radius:5px;-khtml-border-radius:5px;border-radius:5px;top:-24px;left:35px;padding:20px 30px;position:absolute;z-index:98;width:400px;font-size:15px;font-style:italic;text-align:left;line-height:24px}
+.prayer-time-settings a.mptbd_tooltip:hover:before{content:"";border:solid;border-color:transparent #3c434a transparent transparent;border-width:10px;bottom:0;left:16px;position:absolute;z-index:99}
+.prayer-time-settings input::placeholder,
+.prayer-time-settings textarea::placeholder{color:#CBD1DC}
+.prayer-time-settings .prayer-options .select{cursor:pointer;display:inline-block;position:relative;margin:0;padding:0 3px;height:36px;line-height:36px;font-size:14px;border-radius:6px;color:#6a7283;transition:border .3s ease}
+.prayer-time-settings .prayer-options .select .s-hidden{visibility:hidden}
+.prayer-time-settings .prayer-options .select .styledSelect{position:absolute;top:0;right:0;bottom:0;left:0;padding:0 10px;font-weight:500;display:inline-block;border-radius:3px;box-shadow:0 1px 0 rgb(0 0 0 / 5%),inset 0 1px 0 rgb(255 255 255 / 80%);background-color:#f9f9f9;background-image:linear-gradient(to bottom,#fefefe,#f2f2f2);background-repeat:repeat-x;border:1px solid #83bfc3}
+.prayer-time-settings .prayer-options .select .styledSelect:after{content:"";width:0;height:0;border:5px solid transparent;border-color:black transparent transparent;position:absolute;top:13px;right:10px}
+.prayer-time-settings .prayer-options .select .styledSelect:active,
+.prayer-time-settings .prayer-options .select .styledSelect.active{background-color:#eef4ff}
+.prayer-time-settings .prayer-options .select .options{display:none;position:absolute;top:100%;right:0;left:-1px;z-index:999;margin:0;padding:0;list-style:none;border:1px solid #cdd9ed;background-color:#fff;-webkit-box-shadow:0 1px 2px rgb(0 0 0 / 20%);-moz-box-shadow:0 1px 2px rgba(0,0,0,0.2);box-shadow:0 1px 2px rgb(0 0 0 / 20%);width:calc(100% + 50px)}
+.prayer-time-settings .prayer-options .select .options li{margin:0;padding:0 10px;height:32px;line-height:32px;border-bottom:1px solid #c3c4c7}
+.prayer-time-settings .prayer-options .select .options li:hover{background-color:#39f;color:#fff}
+.prayer-time-settings .prayer-options .select .options li:last-child{border-bottom:none}
+.prayer-time-settings .prayer-options .select .options li.active{background-color:#92c836;color:#fff}
+.prayer-time-settings .prayer-options input[type=text],
+.prayer-time-settings .prayer-options input[type=number]{width:100px;margin:0 0 10px;padding:2px 10px;border-radius:5px;border:1px solid #83bfc3}
+.prayer-time-settings .prayer-options input[type=number]{padding-right:0}
+.prayer-time-settings .prayer-options input[type=text]{width:300px}
+.prayer-time-settings .prayer-options.start-image input[type=text]{width:225px}
+.prayer-time-settings #sehri_enable .prayer-color .wp-color-result.button{border-color:#83bfc3}
+.prayer-time-settings #image_enable .prayer-options.end-image .preview_image{background:#F1F1F1;width:48%;height:auto;padding:34px 5px 5px;border:1px solid #CCC}
+.prayer-time-settings #image_enable .prayer-options.end-image #remove_image{cursor:pointer}
+.prayer-time-settings #image_enable .prayer-options.end-image #remove_image:after{content:"\f153";font-family:dashicons;position:absolute;right:5px;top:39px;font-size:30px;color:#404040}
+.mptb-sidebar{display:inline-block;width:29%}
+.mptb-sidebar .card h2.mpt-title{font-size:16px;font-weight:700;color:#0d0925;margin:1em 0;line-height:24px;border-bottom:1px solid #72777c;padding-bottom:7px;text-transform:uppercase}
+.mptb-sidebar .card{position:relative;color:#c9c9c9;margin:20px auto 0;background:#fff;border:1px solid #ddd;box-shadow:0 0 2px 4px rgb(34 35 58 / 10%);padding:5px 25px 10px;border-radius:25px;transition:all .3s}
+.mptb-sidebar .card.rwc-ads{background:#fff url(../images/512.png) 0 0 no-repeat;background-size:contain;width:332px;height:auto;min-height:332px}
+.mptb-sidebar .card p{font-size:14px;color:#4e4a67;line-height:22px;margin:.5em 0}
+.mptb-sidebar .card ol{margin:0 10px 0 24px;padding:0}
+.mptb-sidebar .card ol li{margin:0 0 5px;padding:0;font-size:13px;line-height:22px;color:#4e4a67}
+.mptb-sidebar input.mptb-shortcode{margin:0 0 -3px;padding:6px 0;background:#f0f0f1;font-size:16px;font-weight:500;border:.5px solid #ddd;border-bottom:3px solid #bbb;text-align:center;min-width:150px}
